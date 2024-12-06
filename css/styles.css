@@ -1,0 +1,239 @@
+:root {
+    /* Catppuccin Mocha colors */
+    --ctp-base: #1e1e2e;
+    --ctp-mantle: #181825;
+    --ctp-crust: #11111b;
+    --ctp-text: #cdd6f4;
+    --ctp-subtext1: #bac2de;
+    --ctp-subtext0: #a6adc8;
+    --ctp-overlay2: #9399b2;
+    --ctp-overlay1: #7f849c;
+    --ctp-overlay0: #6c7086;
+    --ctp-surface2: #585b70;
+    --ctp-surface1: #45475a;
+    --ctp-surface0: #313244;
+    --ctp-blue: #89b4fa;
+    --ctp-lavender: #b4befe;
+    --ctp-sapphire: #74c7ec;
+    --ctp-rosewater: #f5e0dc;
+    
+    /* Semantic colors */
+    --primary-color: var(--ctp-blue);
+    --text-color: var(--ctp-text);
+    --background-color: var(--ctp-base);
+    --secondary-background: var(--ctp-mantle);
+    --surface-color: var(--ctp-surface0);
+    --muted-text: var(--ctp-subtext0);
+    --link-color: var(--ctp-sapphire);
+    --link-hover: var(--ctp-lavender);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--ctp-mantle);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--ctp-blue);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--ctp-subtext1);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--ctp-blue);
+}
+
+main {
+    margin-top: 80px;
+    min-height: calc(100vh - 160px);
+    padding: 2rem 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: var(--ctp-surface0);
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--ctp-rosewater);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--ctp-subtext0);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+footer {
+    background-color: var(--ctp-mantle);
+    padding: 2rem 0;
+    margin-top: auto;
+    border-top: 1px solid var(--ctp-surface0);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ctp-subtext0);
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--ctp-subtext1);
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--ctp-blue);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--ctp-blue);
+    color: var(--ctp-base);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: var(--ctp-lavender);
+}
+
+.legal-document {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--ctp-surface0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid var(--ctp-surface1);
+}
+
+.legal-document h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--ctp-rosewater);
+    font-size: 2rem;
+}
+
+.legal-document h2 {
+    color: var(--ctp-blue);
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.legal-document .preamble {
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--ctp-subtext0);
+}
+
+.legal-document .section {
+    margin: 1.5rem 0;
+}
+
+.legal-document ol {
+    counter-reset: item;
+    padding-left: 0;
+}
+
+.legal-document ol > li {
+    display: block;
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.legal-document ol > li:before {
+    content: counter(item) ".";
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    color: var(--ctp-sapphire);
+    font-weight: bold;
+}
+
+.legal-document .signature {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ctp-surface1);
+    font-style: italic;
+    color: var(--ctp-subtext0);
+}
+
+@media (max-width: 768px) {
+    .nav-links, .footer-links {
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}
