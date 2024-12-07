@@ -146,6 +146,13 @@ footer {
     color: var(--ctp-blue);
 }
 
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 .button {
     display: inline-block;
     background-color: var(--ctp-blue);
@@ -160,6 +167,23 @@ footer {
 
 .button:hover {
     background-color: var(--ctp-lavender);
+}
+
+.patreon-button {
+    background-color: #f96854;
+    color: #052d49;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.patreon-button:hover {
+    background-color: #ff7b69;
+}
+
+.patreon-logo {
+    width: 1.2em;
+    height: 1.2em;
 }
 
 .legal-document {
